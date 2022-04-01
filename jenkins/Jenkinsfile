@@ -12,7 +12,6 @@ echo 'Hello World'
 stage('Build') {
 steps {
 checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'githubcredentials', url: 'https://github.com/divya8382/simple-java-maven-app.git']]])
-bat 'mvn -B -DskipTests clean package'
 }
 }
 stage('Test') {
