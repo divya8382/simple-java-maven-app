@@ -19,7 +19,7 @@ steps {
 bat 'mvn test -Dmaven.test.failure.ignore=true'
 }
 }
-stage('sonar')
+stage('sonar') {
 steps {
 bat 'mvn sonar:sonar -Dsonar.login=db0fd46aa08a00880658a95fc3cbdb4ae2c7ab4f'
 }
